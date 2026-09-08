@@ -42,7 +42,7 @@ En la Figura~\ref{fig:sort_aleatorio_d7} se presenta el comportamiento habitual 
     \vspace{-0.5em}
 \end{figure}
 
-El contraste más revelador del aparece al comparar las entradas ordenadas (Figuras~\ref{fig:sort_descendente_d7} y \ref{fig:sort_ascendente_d7}):
+El contraste más revelador del experimento aparece al comparar las entradas ordenadas (Figuras~\ref{fig:sort_descendente_d7} y \ref{fig:sort_ascendente_d7}):
 \begin{itemize}
     \item \textbf{La estabilidad de Quick Sort con esquema Hoare:} En la teoría clásica, cuando un arreglo ya está ordenado de forma ascendente o descendente, Quick Sort corre el riesgo de degradarse a un tiempo cuadrático $\mathcal{O}(N^2)$ si elige como pivote el primer o último elemento (pues divide el arreglo en un subarreglo de $N-1$ y otro vacío). En nuestras pruebas, la curva se mantiene completamente estable y rápida. Esto confirma el éxito de seleccionar el pivote en el punto medio del arreglo y usar el esquema de Hoare, balanceando las particiones evitando una ejecución que podría tardar incluso horas.
     \item \textbf{La notable asimetría de Patience Sort:} Este algoritmo funciona como el juego solitario de cartas: coloca cada nuevo número sobre la primera pila cuyo tope sea mayor o igual a él. 
