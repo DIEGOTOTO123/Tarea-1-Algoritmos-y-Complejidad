@@ -1,0 +1,17 @@
+\subsection{Entorno Experimental y Plataforma de Ejecución}
+Las pruebas de rendimiento y recolección de métricas se ejecutaron bajo condiciones de carga controladas en un equipo portátil con las siguientes especificaciones técnicas:
+\begin{itemize}
+    \item \textbf{Sistema Operativo:} Zorin OS 18.1
+    \item \textbf{Procesador:}  Intel (R) Core(TM) i5'5350U CPU @ 1.80GHz
+    \item \textbf{Memoria RAM:} 8GB
+    \item \textbf{Compilador:}  g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+    \item \textbf{Entorno de Automatización y Análisis:} Python 3.12 utilizando las bibliotecas NumPy, Pandas y Matplotlib para la estructuración de datos y generación de gráficos.
+    \item \textbf{Medición Temporal:} Reloj de la biblioteca estándar \texttt{std::chrono::high\_resolution\_clock}.
+\end{itemize}
+
+\subsection{Conjuntos de Datos (Datasets)}
+Siguiendo las pautas del enunciado para asegurar que los experimentos sean replicables~\cite{hales2017replicability}:
+\begin{enumerate}
+    \item \textbf{Módulo de Ordenamiento:} Se probaron arreglos de enteros con tamaños $N \in \{10^1, 10^2, 10^3, 10^4, 10^5, 10^6, 10^7\}$. Para cada tamaño, se generaron distintas configuraciones de entrada (aleatorio, ordenado, inversamente ordenado, semiordenado al 50\% y con elementos repetidos) variando el rango de los números ($D_1$ y $D_7$), tomando 3 repeticiones ($a, b, c$) por cada caso para promediar los tiempos.
+    \item \textbf{Módulo de Multiplicación Matricial:} Se generaron pares de matrices cuadradas de $N \times N$ con dimensiones $N \in \{16, 64, 256, 1024\}$. Se consideraron tres tipos de matriz (densa, diagonal y dispersa con 10\% de elementos no nulos) y dos rangos de valores para sus elementos ($D_0 \in \{0, 1\}$ y $D_{10} \in \{0, \dots, 9\}$), ejecutando también 3 repeticiones por combinación.
+\end{enumerate}

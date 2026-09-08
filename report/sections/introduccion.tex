@@ -1,0 +1,11 @@
+En el análisis y diseño de algoritmos, comparar experimentalmente las cotas de complejidad teórica con el
+ rendimiento empírico es fundamental para comprender el impacto real de las constantes ocultas y la sobrecarga 
+ computacional~\cite{cormen2009,hales2017replicability}. Este informe aborda el estudio comparativo de dos problemas
+  computacionales clásicos: primero el ordenamiento de arreglos unidimensionales empleando
+   \textit{Merge Sort}, \textit{Quick Sort} (optimizado con partición de Hoare~\cite{educative_hoare_lomuto} 
+   y eliminación por recursión de cola), \textit{Patience Sort}~\cite{taocv3,stablesort2019lis} y el 
+   algoritmo \textit{Sort} default. 
+   Además la multiplicación de matrices cuadradas comparando el método clásico $\mathcal{O}(N^3)$ frente al 
+   método de partición en bloques de Strassen $\mathcal{O}(N^{2.807})$~\cite{cormen2009,bytequest2023strassen}. 
+   El objetivo central es contrastar las curvas empíricas de ejecución frente a sus órdenes asintóticos ideales 
+   ajo diversas familias de entradas y orden de magnitud de datos.

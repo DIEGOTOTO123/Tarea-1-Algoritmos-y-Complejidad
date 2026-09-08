@@ -1,0 +1,36 @@
+# Archivos temporales e intermedios de LaTeX
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.log
+*.out
+*.run.xml
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+texput.log
+
+# Binarios y ejecutables compilados de C++
+*.o
+*.out
+*.exe
+code/sorting/sorting
+code/matrix_multiplication/matrix_multiplication
+
+# Entornos virtuales y caché de Python
+__pycache__/
+*.py[cod]
+.venv/
+.venv-1/
+env/
+
+# Datasets generados masivos (mantener los scripts generadores, ignorar la data cruda pesada)
+code/**/data/datasets/
+*.txt
+
+# Archivos de sistema operativo y editores
+.DS_Store
+.vscode/
+.idea/
